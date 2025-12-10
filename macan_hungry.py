@@ -16,8 +16,6 @@ MAZE_HEIGHT = 21
 base_width = MAZE_WIDTH * CELL_SIZE
 base_height = MAZE_HEIGHT * CELL_SIZE
 
-# --- SETUP SAVE PATH (MODIFIED) ---
-# Menggunakan Local AppData: C:\Users\Username\AppData\Local\MacanHungry
 app_data_path = os.getenv('LOCALAPPDATA')
 if not app_data_path:
     # Fallback jika bukan Windows atau variabel env tidak ada
@@ -269,11 +267,7 @@ class GameWidget(QWidget):
                 # Pastikan tidak merusak dinding luar
                 if 0 < rx < MAZE_WIDTH-1 and 0 < ry < MAZE_HEIGHT-1:
                      new_maze[ry][rx] = 1
-
-        # --- FIX UTAMA ADA DI SINI ---
-        # 6. Pastikan posisi spawn macan (9, 15) TERHUBUNG ke area tengah
-        # Kita paksa buat jalur vertikal (koridor) dari bawah rumah hantu (y=12) 
-        # turun sampai ke posisi spawn (y=15) di kolom tengah (x=9).
+       
         for y in range(12, 17): 
             if y < MAZE_HEIGHT - 1:
                 new_maze[y][9] = 1
@@ -890,4 +884,5 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = MainWindow()
     window.show() 
+
     sys.exit(app.exec())

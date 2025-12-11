@@ -1,6 +1,6 @@
 # 🐯 Macan Hungry - Jungle Adventure Game
 
-![Version](https://img.shields.io/badge/version-1.0.0-orange)
+![Version](https://img.shields.io/badge/version-2.0.0-orange)
 ![Python](https://img.shields.io/badge/python-3.8+-blue)
 ![PySide6](https://img.shields.io/badge/PySide6-6.0+-green)
 ![License](https://img.shields.io/badge/license-MIT-blue)
